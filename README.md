@@ -3,14 +3,30 @@
 
 ## Overview
 
-GDG_STONKS is an innovative project aimed at integrating news sentiment analysis with stock market data to predict stock price movements. By scraping relevant news articles and correlating them with stock performance, the project seeks to provide insights into how news impacts stock prices.
+TechTraders Model is an AI-powered stock market prediction system that uses deep learning (LSTM) and sentiment analysis to forecast stock prices accurately. The model achieves 65% accuracy and is designed to be integrated into a financial assistant chatbot in the future.
 
 ## Features
 
-- **News Scraper**: Collects real-time news articles related to specific stocks.
-- **Sentiment Analysis**: Evaluates the sentiment of news articles to determine their potential impact on stock prices.
-- **Data Integration**: Combines news sentiment data with historical stock prices for comprehensive analysis.
-- **Predictive Modeling**: Utilizes machine learning algorithms to forecast future stock price movements based on integrated data.
+- **News Scraper**: Collects real-time news articles related to specific stocks.  
+- **Sentiment Analysis**: Evaluates the sentiment of news articles to determine their potential impact on stock prices.  
+- **Data Integration**: Combines news sentiment data with historical stock prices for comprehensive analysis.  
+- **Predictive Modeling**: Utilizes machine learning algorithms to forecast future stock price movements based on integrated data.  
+- **Stock Price Prediction**: Uses LSTM to predict future stock prices based on historical trends.  
+- **News Sentiment Analysis**: Incorporates real-time financial news impact on stock predictions.  
+- **Interactive Chatbot UI**: A Gemini AI-powered chatbot to assist users with investment queries.  
+- **Live Market Data Integration**: Fetches stock data using Yahoo Finance & Google Finance APIs.  
+- **Database Support**: Stores stock data and user interactions in MySQL.  
+
+*Note: These features currently function independently but will be integrated into a unified system in the future.*  
+
+## Technologies Used  
+
+- **Machine Learning & AI**: TensorFlow, Keras (LSTM-based stock prediction).  
+- **Natural Language Processing (NLP)**: Google Gemini API (Sentiment analysis for market insights).  
+- **Backend API**: Flask / FastAPI (Model Deployment).  
+- **Frontend**: HTML, Tailwind CSS, JavaScript (Stock dashboard & chatbot UI).  
+- **Database**: MySQL (Stores historical stock data & user inputs).  
+
 
 ## Installation
 

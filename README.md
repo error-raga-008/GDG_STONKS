@@ -1,4 +1,4 @@
-# GDG_STONKS  
+##TechTraders
 
 ## Overview  
 
@@ -66,7 +66,7 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 ### 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/your-username/TechTraders_model.git  
+git clone https://github.com/error-raga-008/TechTraders_model.git  
 cd TechTraders_model  
 ```  
 

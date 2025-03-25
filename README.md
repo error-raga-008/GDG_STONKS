@@ -29,25 +29,41 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 
 ## Installation
+  
+```markdown
+## 🛠️ Setup & Installation  
 
-1. **Clone the Repository**:
+### 1️⃣ Clone the Repository  
+```sh
+git clone https://github.com/your-username/TechTraders_model.git  
+cd TechTraders_model  
+```  
 
-   ```bash
-   git clone https://github.com/error-raga-008/GDG_STONKS.git
-   cd GDG_STONKS
-   ```
+### 2️⃣ Install Dependencies  
+```sh
+pip install -r requirements.txt  
+```  
+Ensure you have **Python 3.8+**, **TensorFlow**, and **Flask** installed.  
 
-2. **Install Dependencies**:
+### 3️⃣ Set Up MySQL Database  
+```sh
+mysql -u root -p  
+CREATE DATABASE stock_prediction;  
+USE stock_prediction;  
+SOURCE database_backup.sql;  
+```  
 
-   Ensure you have Python installed. Then, install the required packages:
+### 4️⃣ Run the Stock Prediction Model  
+```sh
+python Stock_prediction_model.ipynb  
+```  
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set Up Environment Variables**:
-
-   Create a `.env` file in the root directory and add necessary configuration variables, such as API keys for news sources.
+### 5️⃣ Launch Chatbot & Dashboard UI  
+```sh
+# Open test.html in your browser
+# Connect it to the backend API for live predictions
+```  
+```
 
 ## Usage
 
@@ -76,13 +92,48 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
    ```
 
 ## File Structure
+GDG_STONKS/
+│── 📁 models/  
+│   ├── stock_price_model_close.h5        # LSTM model for closing price prediction  
+│   ├── stock_price_model_open.h5         # LSTM model for opening price prediction  
+│  
+│── 📁 data/  
+│   ├── stock_data.csv                     # Historical stock price dataset  
+│   ├── news_data.csv                      # Financial news dataset  
+│   ├── predicted_stock_prices.csv         # AI-generated stock predictions  
+│  
+│── 📁 backend/  
+│   ├── Stock_prediction_model.ipynb       # Jupyter Notebook for stock prediction model  
+│   ├── database_backup.sql                # MySQL backup for database setup  
+│  
+│── 📁 frontend/  
+│   ├── test.html                          # UI with Gemini API (Basic Chatbot UI)  
+│   ├── chatbot_script.js                  # JavaScript for chatbot UI (calls Gemini API)  
+│   ├── styles.css                         # CSS for UI design  
+│  
+│── 📁 api/  
+│   ├── app.py                             # Flask/FastAPI backend to serve predictions  
+│   ├── requirements.txt                   # Python dependencies for API  
+│  
+│── 📁 architecture/  
+│   ├── process_flow_diagram.png           # High-level flow of data processing  
+│   ├── architecture_diagram.png           # AI model + chatbot system architecture  
+│   ├── solution_diagram.png               # How the project solves the problem  
+│  
+│── 📁 docs/  
+│   ├── MVP_Slides.pptx                    # Final submission slides  
+│   ├── README.md                           # Project documentation  
+│   ├── research_papers_links.txt           # References to supporting research  
+│  
+│── 📁 assets/  
+│   ├── logo.png                            # Project branding logo  
+│   ├── demo_screenshot_1.png               # Snapshot of chatbot UI  
+│   ├── demo_screenshot_2.png               # Stock prediction output snapshot  
+│  
+│── 📜 LICENSE                              # Open-source license file  
+│── 📜 .gitignore                           # Ignore unnecessary files  
+│── 📜 README.md                            # Documentation & setup instructions  
 
-- `news_scraper.py`: Script for scraping news articles.
-- `sentiment_analysis.py`: Performs sentiment analysis on news data.
-- `train_model.py`: Trains the predictive model using integrated data.
-- `predict.py`: Generates stock price predictions.
-- `requirements.txt`: Lists all Python dependencies.
-- `data/`: Directory containing datasets like `news_data.csv` and `stock_data.csv`.
 
 ## Contributing
 

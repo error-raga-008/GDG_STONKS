@@ -5,31 +5,69 @@
 
 TechTraders Model is an AI-powered stock market prediction system that uses deep learning (LSTM) and sentiment analysis to forecast stock prices accurately. The model achieves 65% accuracy and is designed to be integrated into a financial assistant chatbot in the future.
 
-## Features
+## 🚀 Features
 
-- **News Scraper**: Collects real-time news articles related to specific stocks.  
-- **Sentiment Analysis**: Evaluates the sentiment of news articles to determine their potential impact on stock prices.  
-- **Data Integration**: Combines news sentiment data with historical stock prices for comprehensive analysis.  
-- **Predictive Modeling**: Utilizes machine learning algorithms to forecast future stock price movements based on integrated data.  
-- **Stock Price Prediction**: Uses LSTM to predict future stock prices based on historical trends.  
-- **News Sentiment Analysis**: Incorporates real-time financial news impact on stock predictions.  
-- **Interactive Chatbot UI**: A Gemini AI-powered chatbot to assist users with investment queries.  
-- **Live Market Data Integration**: Fetches stock data using Yahoo Finance & Google Finance APIs.  
-- **Database Support**: Stores stock data and user interactions in MySQL.  
-
-*Note: These features currently function independently but will be integrated into a unified system in the future.*  
-
-## Technologies Used  
-
-- **Machine Learning & AI**: TensorFlow, Keras (LSTM-based stock prediction).  
-- **Natural Language Processing (NLP)**: Google Gemini API (Sentiment analysis for market insights).  
-- **Backend API**: Flask / FastAPI (Model Deployment).  
-- **Frontend**: HTML, Tailwind CSS, JavaScript (Stock dashboard & chatbot UI).  
-- **Database**: MySQL (Stores historical stock data & user inputs).  
-
-
-## Installation
+### 🔹 AI-Powered Stock Prediction
+- Predicts **opening and closing stock prices** using **LSTM models**.
+- Analyzes **historical stock data (2015-2024)** for trend forecasting.
+- Calculates **technical indicators** (Moving Averages, Volatility, Daily Change).
   
+### 🔹 Sentiment Analysis on Financial News  
+- Uses **DistilBERT (Hugging Face Transformers)** for sentiment scoring.  
+- Analyzes news headlines to determine market sentiment.  
+- Integrates with stock data to **enhance prediction accuracy**.  
+
+### 🔹 Interactive AI Chatbot  
+- **Conversational AI** to answer financial queries.  
+- Integrated with **Google Gemini-Flash 2.0 API** for dynamic responses.  
+- Supports **text, images, and graph-based responses**.  
+
+### 🔹 Data Visualization  
+- **Chart.js** for rendering **real-time stock graphs**.  
+- Uses **Matplotlib** for actual vs. predicted stock price comparison.
+
+### 🔹 Data Storage & Database Support  
+- **Stores stock and news data in MySQL** for structured analysis.  
+- **Supports CSV exports** for external data handling.  
+
+### 🔹 Real-Time News Scraper  
+- **Collects real-time news articles** related to specific stocks.  
+- Uses **Selenium & BeautifulSoup** for automated web scraping.  
+- Integrates sentiment analysis for a **comprehensive stock evaluation**.  
+
+### 🔹 Web Scraping  
+- Extracts real-time financial news using **Selenium & BeautifulSoup**.  
+- Stores structured stock data in a **MySQL database**.
+
+---
+
+##  Technologies Used
+
+### **📌 Machine Learning & Deep Learning**
+- **TensorFlow & Keras** – LSTM-based stock price prediction.  
+- **Scikit-learn** – Data preprocessing, scaling, and evaluation metrics.  
+- **Hugging Face Transformers** – Sentiment analysis on financial news.  
+
+### **📌 Web Development**
+- **HTML, Tailwind CSS** – UI design for chatbot and response selection.  
+- **JavaScript (Chart.js)** – Graph visualization.  
+
+### **📌 Backend & APIs**
+- **Python (Flask, Pandas, NumPy)** – Data processing and API handling.  
+- **Google Gemini AI API** – AI-generated financial insights.  
+
+### **📌 Web Scraping**
+- **Selenium & BeautifulSoup** – Extracting real-time financial news.  
+
+### **📌 Database & Data Storage**
+- **MySQL** – Storing stock and news data for model training.  
+- **CSV** – Data storage for stock predictions and scraped news.  
+
+---
+
+
+## Installation  
+
 ### 1️⃣ Clone the Repository  
 ```sh
 git clone https://github.com/your-username/TechTraders_model.git  
@@ -42,50 +80,17 @@ pip install -r requirements.txt
 ```  
 Ensure you have **Python 3.8+**, **TensorFlow**, and **Flask** installed.  
 
-### 3️⃣ Set Up MySQL Database  
+### 3️⃣ Run the Stock Prediction Model  
 ```sh
-mysql -u root -p  
-CREATE DATABASE stock_prediction;  
-USE stock_prediction;  
-SOURCE database_backup.sql;  
+python Prediction_Model/Stock_prediction_model.ipynb  
 ```  
 
-### 4️⃣ Run the Stock Prediction Model  
+### 4️⃣ Launch Chatbot & Dashboard UI  
+Simply open the UI file in your browser:  
 ```sh
-python Stock_prediction_model.ipynb  
-```  
-
-### 5️⃣ Launch Chatbot & Dashboard UI  
-```sh
-# Open test.html in your browser
+ui/test.html  
 ```  
 ```
-
-## Usage
-
-1. **Run the News Scraper**:
-
-   ```bash
-   python news_scraper.py
-   ```
-
-2. **Perform Sentiment Analysis**:
-
-   ```bash
-   python sentiment_analysis.py
-   ```
-
-3. **Train the Predictive Model**:
-
-   ```bash
-   python train_model.py
-   ```
-
-4. **Make Predictions**:
-
-   ```bash
-   python predict.py
-   ```
 
 ## File Structure
 Tech_Traders/
@@ -153,11 +158,31 @@ Tech_Traders/
 🚀 **Enhance Accuracy** with Reinforcement Learning  
 
 ---
+## 🚀 Current Integration Status  
+
+✅ **Stock Prediction Model**: Fully functional and can be executed using the provided `Stock_prediction_model.ipynb`.  
+✅ **Chatbot & UI**: The `test.html` file is working properly and can be accessed through a browser.  
+
+🚧 **Ongoing Development:**  
+- **Database Integration:** While the `database.sql` file has been created, it is **not yet connected** to the chatbot or prediction model.  
+- **Chatbot AI:** We are planning to enhance the chatbot with **real-time stock insights, user authentication, and live news updates**.  
+- **Improved Automation:** The future version will **automatically fetch stock and news data** instead of relying on manually updated CSV files.  
+
+### **🛠️ Future Roadmap**  
+🔹 **Integrate MySQL database** for structured storage and real-time queries.  
+🔹 **Improve chatbot functionalities** to provide AI-driven stock market insights.  
+🔹 **Enhance prediction accuracy** with Reinforcement Learning and live data feeds.  
+
+---
+
 
 ## 🤝 Contributors
 
-👨‍💻 **Your Name** – AI/ML Developer  
-👥 **Team Members** (Add if applicable)  
+
+👥 **Team Members**
+Vishvesh Sharma
+Rishi Rami
+Krish Savaliya  
 
 ---
 

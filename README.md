@@ -143,7 +143,10 @@ Tech_Traders/
 │── 📜 requirements.txt                   # List of required Python dependencies  
 
 
-## 📊 Model Performance
+
+---
+
+## 📊 Model Performance  
 
 ✅ **Achieved Accuracy:** 65% (R² Score: 0.65)  
 ✅ **Tested on:** 2015-2024 stock data  
@@ -151,13 +154,14 @@ Tech_Traders/
 
 ---
 
-## 🎯 Future Enhancements
+## 🎯 Future Enhancements  
 
 🚀 **Deploy as a Full-Fledged Chatbot** with Financial Assistant Features  
 🚀 **Integrate with Google Cloud Vertex AI** for Scalable Predictions  
 🚀 **Enhance Accuracy** with Reinforcement Learning  
 
 ---
+
 ## 🚀 Current Integration Status  
 
 ✅ **Stock Prediction Model**: Fully functional and can be executed using the provided `Stock_prediction_model.ipynb`.  
@@ -175,33 +179,31 @@ Tech_Traders/
 
 ---
 
+## 🤝 Contributors  
 
-## 🤝 Contributors
-
-
-👥 **Team Members**
-Vishvesh Sharma
-Rishi Rami
-Krish Savaliya  
+👥 **Team Members**  
+- **Vishvesh Sharma**  
+- **Rishi Rami**  
+- **Krish Savaliya**  
 
 ---
 
-## 📢 MVP Submission Link
+## 📢 MVP Submission Link  
 
 🔗 **Google Drive MVP Link:** [Insert Your MVP Link Here]  
 
+---
 
+## 🛠️ Contributing  
 
-## Contributing
+We welcome contributions to enhance **GDG_STONKS**. To contribute:  
 
-We welcome contributions to enhance GDG_STONKS. To contribute:
+1. **Fork the repository.**
 
-1. Fork the repository.
-2. Create a new branch:
-
+2. **Create a new branch:**  
    ```bash
    git checkout -b feature-name
-   ```
+
 
 3. Make your changes and commit them:
 

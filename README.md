@@ -202,6 +202,6 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for m
 
 ## 🙌 Acknowledgements  
 
-We extend our gratitude to the **open-source community** and **resources** that have contributed to the development of **GDG_STONKS**.  
+We extend our gratitude to the **open-source community** and **resources** that have contributed to the development of **TechTraders_model**.  
 ```
 

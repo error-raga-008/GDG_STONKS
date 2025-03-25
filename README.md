@@ -138,6 +138,35 @@ Tech_Traders/
 │── 📜 requirements.txt                   # List of required Python dependencies  
 
 
+## 📊 Model Performance
+
+✅ **Achieved Accuracy:** 65% (R² Score: 0.65)  
+✅ **Tested on:** 2015-2024 stock data  
+✅ **Predicted stock prices for:** June 2024  
+
+---
+
+## 🎯 Future Enhancements
+
+🚀 **Deploy as a Full-Fledged Chatbot** with Financial Assistant Features  
+🚀 **Integrate with Google Cloud Vertex AI** for Scalable Predictions  
+🚀 **Enhance Accuracy** with Reinforcement Learning  
+
+---
+
+## 🤝 Contributors
+
+👨‍💻 **Your Name** – AI/ML Developer  
+👥 **Team Members** (Add if applicable)  
+
+---
+
+## 📢 MVP Submission Link
+
+🔗 **Google Drive MVP Link:** [Insert Your MVP Link Here]  
+
+
+
 ## Contributing
 
 We welcome contributions to enhance GDG_STONKS. To contribute:

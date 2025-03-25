@@ -1,17 +1,21 @@
+Here is your **GitHub-ready README.md** file, properly formatted and ready to **directly paste into your repository**:  
 
-# GDG_STONKS
+```md
+# GDG_STONKS  
 
-## Overview
+## Overview  
 
-TechTraders Model is an AI-powered stock market prediction system that uses deep learning (LSTM) and sentiment analysis to forecast stock prices accurately. The model achieves 65% accuracy and is designed to be integrated into a financial assistant chatbot in the future.
+TechTraders Model is an AI-powered stock market prediction system that uses deep learning (LSTM) and sentiment analysis to forecast stock prices accurately. The model achieves **65% accuracy** and is designed to be integrated into a financial assistant chatbot in the future.  
 
-## 🚀 Features
+---
 
-### 🔹 AI-Powered Stock Prediction
-- Predicts **opening and closing stock prices** using **LSTM models**.
-- Analyzes **historical stock data (2015-2024)** for trend forecasting.
-- Calculates **technical indicators** (Moving Averages, Volatility, Daily Change).
-  
+## 🚀 Features  
+
+### 🔹 AI-Powered Stock Prediction  
+- Predicts **opening and closing stock prices** using **LSTM models**.  
+- Analyzes **historical stock data (2015-2024)** for trend forecasting.  
+- Calculates **technical indicators** (Moving Averages, Volatility, Daily Change).  
+
 ### 🔹 Sentiment Analysis on Financial News  
 - Uses **DistilBERT (Hugging Face Transformers)** for sentiment scoring.  
 - Analyzes news headlines to determine market sentiment.  
@@ -24,7 +28,7 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 ### 🔹 Data Visualization  
 - **Chart.js** for rendering **real-time stock graphs**.  
-- Uses **Matplotlib** for actual vs. predicted stock price comparison.
+- Uses **Matplotlib** for actual vs. predicted stock price comparison.  
 
 ### 🔹 Data Storage & Database Support  
 - **Stores stock and news data in MySQL** for structured analysis.  
@@ -35,38 +39,33 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 - Uses **Selenium & BeautifulSoup** for automated web scraping.  
 - Integrates sentiment analysis for a **comprehensive stock evaluation**.  
 
-### 🔹 Web Scraping  
-- Extracts real-time financial news using **Selenium & BeautifulSoup**.  
-- Stores structured stock data in a **MySQL database**.
-
 ---
 
-##  Technologies Used
+## 🛠️ Technologies Used  
 
-### **📌 Machine Learning & Deep Learning**
+### **📌 Machine Learning & Deep Learning**  
 - **TensorFlow & Keras** – LSTM-based stock price prediction.  
 - **Scikit-learn** – Data preprocessing, scaling, and evaluation metrics.  
 - **Hugging Face Transformers** – Sentiment analysis on financial news.  
 
-### **📌 Web Development**
+### **📌 Web Development**  
 - **HTML, Tailwind CSS** – UI design for chatbot and response selection.  
 - **JavaScript (Chart.js)** – Graph visualization.  
 
-### **📌 Backend & APIs**
+### **📌 Backend & APIs**  
 - **Python (Flask, Pandas, NumPy)** – Data processing and API handling.  
 - **Google Gemini AI API** – AI-generated financial insights.  
 
-### **📌 Web Scraping**
+### **📌 Web Scraping**  
 - **Selenium & BeautifulSoup** – Extracting real-time financial news.  
 
-### **📌 Database & Data Storage**
+### **📌 Database & Data Storage**  
 - **MySQL** – Storing stock and news data for model training.  
 - **CSV** – Data storage for stock predictions and scraped news.  
 
 ---
 
-
-## Installation  
+## ⚙️ Installation  
 
 ### 1️⃣ Clone the Repository  
 ```sh
@@ -90,59 +89,42 @@ Simply open the UI file in your browser:
 ```sh
 ui/test.html  
 ```  
+
+---
+
+## 📁 File Structure  
+
 ```
-
-## File Structure
 Tech_Traders/
-
-📁 Prediction_Model/  
-│── stock_price_model_close.h5         # LSTM model for closing price prediction  
-│── stock_price_model_open.h5          # LSTM model for opening price prediction  
-│── stock_data.csv                      # Historical stock price dataset  
-│── news_data.csv                       # Financial news dataset  
-│── predicted_stock_prices.csv          # AI-generated stock predictions  
-│── Stock_prediction_model.ipynb        # Jupyter Notebook for stock prediction model  
+│── 📁 Prediction_Model/  
+│   │── stock_price_model_close.h5         # LSTM model for closing price prediction  
+│   │── stock_price_model_open.h5          # LSTM model for opening price prediction  
+│   │── stock_data.csv                      # Historical stock price dataset  
+│   │── news_data.csv                       # Financial news dataset  
+│   │── predicted_stock_prices.csv          # AI-generated stock predictions  
+│   │── Stock_prediction_model.ipynb        # Jupyter Notebook for stock prediction model  
 │  
-│── 📁 assets/                           # Folder for storing images  
-│   ├── Accuracy.jpg                     # Model accuracy visualization  
-│   ├── ChatBot_result.jpg                # Chatbot prediction output  
-│   ├── Chatbot_Ui.jpg                    # User interface of the chatbot  
-│   ├── DataBase_tables.jpg               # Database schema and tables  
-│   ├── flowchart.png                     # System flowchart diagram  
-│   ├── logo.jpg                          # Project or company logo  
-│   ├── Model_Error_Analysis.jpg          # Model error evaluation analysis  
-│   ├── Model_sample_code_Snippet.png     # Sample code snippet from the model  
+│── 📁 assets/                             # Folder for storing images  
+│   │── Accuracy.jpg                       # Model accuracy visualization  
+│   │── ChatBot_result.jpg                  # Chatbot prediction output  
+│   │── Chatbot_Ui.jpg                      # User interface of the chatbot  
+│   │── DataBase_tables.jpg                 # Database schema and tables  
+│   │── flowchart.png                       # System flowchart diagram  
+│   │── logo.jpg                            # Project or company logo  
+│   │── Model_Error_Analysis.jpg            # Model error evaluation analysis  
+│   │── Model_sample_code_Snippet.png       # Sample code snippet from the model  
 │  
-│── 📁 ui/                               # Folder for UI-related files  
-│   ├── test.html                         # HTML file for UI  
+│── 📁 ui/                                 # Folder for UI-related files  
+│   │── test.html                           # HTML file for UI  
 │  
-│── 📁 database/                         # Folder for database-related files  
-│   ├── database.sql                      # SQL file for database setup  
+│── 📁 database/                           # Folder for database-related files  
+│   │── database.sql                        # SQL file for database setup  
 │  
-│── 📁 news_scraper/                     # Folder for detailed news scraping scripts and data  
-│   ├── 📁 adani/                         # Subfolder for Adani-related news  
-│   │   ├── data.csv                      # Raw stock data  
-│   │   ├── Stocks.csv                    # Processed stock dataset  
-│   │   ├── news.csv                      # Financial news dataset  
-│   ├── adani_power_news_fixed.csv        # Fixed news dataset for Adani Power  
-│   ├── chromedriver.exe                  # Web driver for scraping  
-│   ├── news.py                           # Python script for fetching news  
-│   ├── test.py                           # Test script for news scraping  
-│  
-│── 📁 extra/                            # Folder for additional datasets and backups  
-│   ├── new_news_data.csv                 # Additional news dataset  
-│   ├── news_data.csv                     # Backup of the main news dataset  
-│   ├── old_predicted_stock_prices.csv     # Previous predicted stock prices  
-│   ├── stock_data.csv                     # Backup of the main stock dataset  
-│   ├── xx_news_data.csv                   # Extra financial news dataset  
-│   ├── xx_stock_data.csv                  # Extra stock dataset  
-│  
-│── 📜 LICENSE                           # Open-source license file  
-│── 📜 .gitignore                        # Ignore unnecessary files  
-│── 📜 README.md                         # Documentation & setup instructions  
-│── 📜 requirements.txt                   # List of required Python dependencies  
-
-
+│── 📜 LICENSE                             # Open-source license file  
+│── 📜 .gitignore                          # Ignore unnecessary files  
+│── 📜 README.md                           # Documentation & setup instructions  
+│── 📜 requirements.txt                     # List of required Python dependencies  
+```
 
 ---
 
@@ -198,32 +180,31 @@ Tech_Traders/
 
 We welcome contributions to enhance **GDG_STONKS**. To contribute:  
 
-1. **Fork the repository.**
-
+1. **Fork the repository.**  
 2. **Create a new branch:**  
-   ```bash
+   ```sh
    git checkout -b feature-name
-
-
-3. Make your changes and commit them:
-
-   ```bash
-   git commit -m 'Add new feature'
    ```
-
-4. Push to the branch:
-
-   ```bash
+3. **Make your changes and commit them:**  
+   ```sh
+   git commit -m "Add new feature"
+   ```
+4. **Push to the branch:**  
+   ```sh
    git push origin feature-name
    ```
+5. **Submit a pull request.**  
 
-5. Submit a pull request.
+---
 
-## License
+## 📜 License  
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.  
 
-## Acknowledgements
+---
 
-We extend our gratitude to the open-source community and resources that have contributed to the development of GDG_STONKS.
+## 🙌 Acknowledgements  
+
+We extend our gratitude to the **open-source community** and **resources** that have contributed to the development of **GDG_STONKS**.  
+```
 

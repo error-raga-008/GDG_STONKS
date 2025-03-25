@@ -1,6 +1,3 @@
-Here is your **GitHub-ready README.md** file, properly formatted and ready to **directly paste into your repository**:  
-
-```md
 # GDG_STONKS  
 
 ## Overview  

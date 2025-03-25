@@ -1,12 +1,18 @@
+# Core Libraries
 numpy
 pandas
 matplotlib
-seaborn
 scikit-learn
-nltk
-beautifulsoup4
-requests
-yfinance
+
+# Deep Learning & AI Models
+tensorflow
 torch
 transformers
-dotenv
+
+# Sentiment Analysis
+torchvision
+sentencepiece
+
+# Utility Libraries
+seaborn
+tqdm

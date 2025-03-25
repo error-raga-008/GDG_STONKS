@@ -128,10 +128,18 @@ Tech_Traders/
 │   ├── news.py                           # Python script for fetching news  
 │   ├── test.py                           # Test script for news scraping  
 │  
+│── 📁 extra/                           # Folder for additional datasets and backups  
+│   ├── new_news_data.csv                 # Additional news dataset  
+│   ├── news_data.csv                     # Backup of the main news dataset  
+│   ├── old_predicted_stock_prices.csv     # Previous predicted stock prices  
+│   ├── stock_data.csv                     # Backup of the main stock dataset  
+│   ├── xx_news_data.csv                   # Extra financial news dataset  
+│   ├── xx_stock_data.csv                  # Extra stock dataset  
+│  
 │── 📜 LICENSE                              # Open-source license file  
 │── 📜 .gitignore                           # Ignore unnecessary files  
 │── 📜 README.md                            # Documentation & setup instructions  
-
+│── 📜 requirements.txt                      # List of required Python dependencies  
 
 ## Contributing
 

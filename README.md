@@ -30,9 +30,6 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 ## Installation
   
-```markdown
-## 🛠️ Setup & Installation  
-
 ### 1️⃣ Clone the Repository  
 ```sh
 git clone https://github.com/your-username/TechTraders_model.git  
@@ -61,7 +58,6 @@ python Stock_prediction_model.ipynb
 ### 5️⃣ Launch Chatbot & Dashboard UI  
 ```sh
 # Open test.html in your browser
-# Connect it to the backend API for live predictions
 ```  
 ```
 

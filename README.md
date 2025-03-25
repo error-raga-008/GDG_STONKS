@@ -92,43 +92,41 @@ python Stock_prediction_model.ipynb
    ```
 
 ## File Structure
-GDG_STONKS/
-│── 📁 models/  
-│   ├── stock_price_model_close.h5        # LSTM model for closing price prediction  
-│   ├── stock_price_model_open.h5         # LSTM model for opening price prediction  
+Tech_Traders/
+
+📁 Prediction_Model/
+│── stock_price_model_close.h5        # LSTM model for closing price prediction  
+│── stock_price_model_open.h5         # LSTM model for opening price prediction  
+│── stock_data.csv                     # Historical stock price dataset  
+│── news_data.csv                      # Financial news dataset  
+│── predicted_stock_prices.csv         # AI-generated stock predictions  
+│── Stock_prediction_model.ipynb       # Jupyter Notebook for stock prediction model  
 │  
-│── 📁 data/  
-│   ├── stock_data.csv                     # Historical stock price dataset  
-│   ├── news_data.csv                      # Financial news dataset  
-│   ├── predicted_stock_prices.csv         # AI-generated stock predictions  
+│── 📁 assets/                          # Folder for storing images  
+│   ├── Accuracy.jpg                    # Model accuracy visualization  
+│   ├── ChatBot_result.jpg               # Chatbot prediction output  
+│   ├── Chatbot_Ui.jpg                   # User interface of the chatbot  
+│   ├── DataBase_tables.jpg              # Database schema and tables  
+│   ├── flowchart.png                    # System flowchart diagram  
+│   ├── logo.jpg                         # Project or company logo  
+│   ├── Model_Error_Analysis.jpg         # Model error evaluation analysis  
+│   ├── Model_sample_code_Snippet.png    # Sample code snippet from the model  
 │  
-│── 📁 backend/  
-│   ├── Stock_prediction_model.ipynb       # Jupyter Notebook for stock prediction model  
-│   ├── database_backup.sql                # MySQL backup for database setup  
+│── 📁 ui/                              # Folder for UI-related files  
+│   ├── test.html                       # HTML file for UI  
 │  
-│── 📁 frontend/  
-│   ├── test.html                          # UI with Gemini API (Basic Chatbot UI)  
-│   ├── chatbot_script.js                  # JavaScript for chatbot UI (calls Gemini API)  
-│   ├── styles.css                         # CSS for UI design  
-│  
-│── 📁 api/  
-│   ├── app.py                             # Flask/FastAPI backend to serve predictions  
-│   ├── requirements.txt                   # Python dependencies for API  
-│  
-│── 📁 architecture/  
-│   ├── process_flow_diagram.png           # High-level flow of data processing  
-│   ├── architecture_diagram.png           # AI model + chatbot system architecture  
-│   ├── solution_diagram.png               # How the project solves the problem  
-│  
-│── 📁 docs/  
-│   ├── MVP_Slides.pptx                    # Final submission slides  
-│   ├── README.md                           # Project documentation  
-│   ├── research_papers_links.txt           # References to supporting research  
-│  
-│── 📁 assets/  
-│   ├── logo.png                            # Project branding logo  
-│   ├── demo_screenshot_1.png               # Snapshot of chatbot UI  
-│   ├── demo_screenshot_2.png               # Stock prediction output snapshot  
+│── 📁 database/                        # Folder for database-related files  
+│   ├── database.sql                     # SQL file for database setup 
+│ 
+│── 📁 news_scraper/                    # Folder for detailed news scraping scripts and data  
+│   ├── 📁 adani/                         # Subfolder for Adani-related news  
+│   │   ├── data.csv                      # Raw stock data  
+│   │   ├── Stocks.csv                    # Processed stock dataset  
+│   │   ├── news.csv                      # Financial news dataset  
+│   ├── adani_power_news_fixed.csv        # Fixed news dataset for Adani Power  
+│   ├── chromedriver.exe                  # Web driver for scraping  
+│   ├── news.py                           # Python script for fetching news  
+│   ├── test.py                           # Test script for news scraping  
 │  
 │── 📜 LICENSE                              # Open-source license file  
 │── 📜 .gitignore                           # Ignore unnecessary files  

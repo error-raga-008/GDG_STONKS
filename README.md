@@ -90,31 +90,31 @@ python Stock_prediction_model.ipynb
 ## File Structure
 Tech_Traders/
 
-📁 Prediction_Model/
-│── stock_price_model_close.h5        # LSTM model for closing price prediction  
-│── stock_price_model_open.h5         # LSTM model for opening price prediction  
-│── stock_data.csv                     # Historical stock price dataset  
-│── news_data.csv                      # Financial news dataset  
-│── predicted_stock_prices.csv         # AI-generated stock predictions  
-│── Stock_prediction_model.ipynb       # Jupyter Notebook for stock prediction model  
+📁 Prediction_Model/  
+│── stock_price_model_close.h5         # LSTM model for closing price prediction  
+│── stock_price_model_open.h5          # LSTM model for opening price prediction  
+│── stock_data.csv                      # Historical stock price dataset  
+│── news_data.csv                       # Financial news dataset  
+│── predicted_stock_prices.csv          # AI-generated stock predictions  
+│── Stock_prediction_model.ipynb        # Jupyter Notebook for stock prediction model  
 │  
-│── 📁 assets/                          # Folder for storing images  
-│   ├── Accuracy.jpg                    # Model accuracy visualization  
-│   ├── ChatBot_result.jpg               # Chatbot prediction output  
-│   ├── Chatbot_Ui.jpg                   # User interface of the chatbot  
-│   ├── DataBase_tables.jpg              # Database schema and tables  
-│   ├── flowchart.png                    # System flowchart diagram  
-│   ├── logo.jpg                         # Project or company logo  
-│   ├── Model_Error_Analysis.jpg         # Model error evaluation analysis  
-│   ├── Model_sample_code_Snippet.png    # Sample code snippet from the model  
+│── 📁 assets/                           # Folder for storing images  
+│   ├── Accuracy.jpg                     # Model accuracy visualization  
+│   ├── ChatBot_result.jpg                # Chatbot prediction output  
+│   ├── Chatbot_Ui.jpg                    # User interface of the chatbot  
+│   ├── DataBase_tables.jpg               # Database schema and tables  
+│   ├── flowchart.png                     # System flowchart diagram  
+│   ├── logo.jpg                          # Project or company logo  
+│   ├── Model_Error_Analysis.jpg          # Model error evaluation analysis  
+│   ├── Model_sample_code_Snippet.png     # Sample code snippet from the model  
 │  
-│── 📁 ui/                              # Folder for UI-related files  
-│   ├── test.html                       # HTML file for UI  
+│── 📁 ui/                               # Folder for UI-related files  
+│   ├── test.html                         # HTML file for UI  
 │  
-│── 📁 database/                        # Folder for database-related files  
-│   ├── database.sql                     # SQL file for database setup 
-│
-│── 📁 news_scraper/                    # Folder for detailed news scraping scripts and data  
+│── 📁 database/                         # Folder for database-related files  
+│   ├── database.sql                      # SQL file for database setup  
+│  
+│── 📁 news_scraper/                     # Folder for detailed news scraping scripts and data  
 │   ├── 📁 adani/                         # Subfolder for Adani-related news  
 │   │   ├── data.csv                      # Raw stock data  
 │   │   ├── Stocks.csv                    # Processed stock dataset  
@@ -124,7 +124,7 @@ Tech_Traders/
 │   ├── news.py                           # Python script for fetching news  
 │   ├── test.py                           # Test script for news scraping  
 │  
-│── 📁 extra/                           # Folder for additional datasets and backups  
+│── 📁 extra/                            # Folder for additional datasets and backups  
 │   ├── new_news_data.csv                 # Additional news dataset  
 │   ├── news_data.csv                     # Backup of the main news dataset  
 │   ├── old_predicted_stock_prices.csv     # Previous predicted stock prices  
@@ -132,10 +132,11 @@ Tech_Traders/
 │   ├── xx_news_data.csv                   # Extra financial news dataset  
 │   ├── xx_stock_data.csv                  # Extra stock dataset  
 │  
-│── 📜 LICENSE                              # Open-source license file  
-│── 📜 .gitignore                           # Ignore unnecessary files  
-│── 📜 README.md                            # Documentation & setup instructions  
-│── 📜 requirements.txt                      # List of required Python dependencies  
+│── 📜 LICENSE                           # Open-source license file  
+│── 📜 .gitignore                        # Ignore unnecessary files  
+│── 📜 README.md                         # Documentation & setup instructions  
+│── 📜 requirements.txt                   # List of required Python dependencies  
+
 
 ## Contributing
 

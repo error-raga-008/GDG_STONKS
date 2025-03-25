@@ -113,7 +113,7 @@ Tech_Traders/
 │  
 │── 📁 database/                        # Folder for database-related files  
 │   ├── database.sql                     # SQL file for database setup 
-│ 
+│
 │── 📁 news_scraper/                    # Folder for detailed news scraping scripts and data  
 │   ├── 📁 adani/                         # Subfolder for Adani-related news  
 │   │   ├── data.csv                      # Raw stock data  

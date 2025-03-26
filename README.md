@@ -113,7 +113,11 @@ Tech_Traders/
 │  
 │── 📁 ui/                                 # Folder for UI-related files  
 │   │── test.html                           # HTML file for UI  
-│  
+│
+│── 📁 news_scraper/                       # Folder for scraping news    
+│   │── chromedriver.exe                   # Web driver for scraping  
+│   │── news.py                            # Python script for fetching news  
+|  
 │── 📁 database/                           # Folder for database-related files  
 │   │── database.sql                        # SQL file for database setup  
 │  

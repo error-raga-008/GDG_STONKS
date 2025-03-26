@@ -62,10 +62,6 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 ---
 
- 
-
----
-
 ## ⚙️ Installation  
 
 ### 1️⃣ Clone the Repository  

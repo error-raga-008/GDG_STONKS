@@ -62,6 +62,10 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 
 ---
 
+ 
+
+---
+
 ## ⚙️ Installation  
 
 ### 1️⃣ Clone the Repository  
@@ -81,11 +85,20 @@ Ensure you have **Python 3.8+**, **TensorFlow**, and **Flask** installed.
 python Prediction_Model/Stock_prediction_model.ipynb  
 ```  
 
-### 4️⃣ Launch Chatbot & Dashboard UI  
+### 4️⃣ Configure API Key  
+Before running the UI, add your API key in the `ui/test.html` file at **line 64**:  
+```html
+const API_KEY = "your-api-key-here";
+```  
+
+### 5️⃣ Launch Chatbot & Dashboard UI  
 Simply open the UI file in your browser:  
 ```sh
 ui/test.html  
 ```  
+
+### 🌐 Live Demo  
+Check out the live demo: [AI-Powered Financial Chatbot](https://ai-powred-financial-chatbot-gdg.netlify.app/)  
 
 ---
 

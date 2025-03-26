@@ -60,7 +60,7 @@ TechTraders Model is an AI-powered stock market prediction system that uses deep
 - **MySQL** – Storing stock and news data for model training.  
 - **CSV** – Data storage for stock predictions and scraped news.
 
-- ***WE HAVE ONLY TESTED THIS MODEL ON ADANI POWER STOCK AS OF 26/03/25.
+***WE HAVE ONLY TESTED THIS MODEL ON ADANI POWER STOCK AS OF 26/03/25.
 
 ---
 
@@ -137,7 +137,7 @@ Tech_Traders/
 ✅ **Tested on:** 2015-2024 stock data  
 ✅ **Predicted stock prices for:** June 2024
 
-- ***WE HAVE ONLY TESTED THIS MODEL ON ADANI POWER STOCK AS OF 26/03/25.
+***WE HAVE ONLY TESTED THIS MODEL ON ADANI POWER STOCK AS OF 26/03/25.
 
 ---
 

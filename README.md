@@ -182,7 +182,7 @@ Tech_Traders/
 
 ---
 
-## 📢 MVP Submission Link  
+## 📢 Submission Links  
 
 🔗 **Google Drive MVP Link:** https://drive.google.com/drive/u/0/folders/1mEkpHnyDVfx_SHxb94X3iIvl6zxyJV8Z
 

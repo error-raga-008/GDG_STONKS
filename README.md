@@ -185,6 +185,7 @@ Tech_Traders/
 ## 📢 MVP Submission Link  
 
 🔗 **Google Drive MVP Link:** https://drive.google.com/drive/u/0/folders/1mEkpHnyDVfx_SHxb94X3iIvl6zxyJV8Z
+
 🎥 **Demo Video:** https://youtu.be/KqnEQ0DMg9c?si=yCju-WLICqk8K107
 
 ---

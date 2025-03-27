@@ -165,11 +165,13 @@ Tech_Traders/
 - **Database Integration:** While the `database.sql` file has been created, it is **not yet connected** to the chatbot or prediction model.  
 - **Chatbot AI:** We are planning to enhance the chatbot with **real-time stock insights, user authentication, and live news updates**.  
 - **Improved Automation:** The future version will **automatically fetch stock and news data** instead of relying on manually updated CSV files.  
+- **Graph Analysis & Additional Factors:** The model will be improved to analyze stock market graphs and consider various external factors affecting the market to provide more accurate predictions.  
+- **UI Overhaul:** The current UI is in the early development stage, and the final version will be **completely different**, featuring a more refined and user-friendly experience.  
 
 ### **🛠️ Future Roadmap**  
 🔹 **Integrate MySQL database** for structured storage and real-time queries.  
 🔹 **Improve chatbot functionalities** to provide AI-driven stock market insights.  
-🔹 **Enhance prediction accuracy** with Reinforcement Learning and live data feeds.  
+🔹 **Enhance prediction accuracy** with Reinforcement Learning, live data feeds, and advanced graph analysis.   
 
 ---
 

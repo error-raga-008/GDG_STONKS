@@ -1,0 +1,18 @@
+# Core Libraries
+numpy
+pandas
+matplotlib
+scikit-learn
+
+# Deep Learning & AI Models
+tensorflow
+torch
+transformers
+
+# Sentiment Analysis
+torchvision
+sentencepiece
+
+# Utility Libraries
+seaborn
+tqdm

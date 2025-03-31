@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Prediction AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom scrollbar for webkit browsers */
+    .overflow-y-auto::-webkit-scrollbar {
+        width: 6px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-track {
+        background: #374151; /* gray-700 */
+        border-radius: 10px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+        background: #4b5563; /* gray-600 */
+        border-radius: 10px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; /* gray-500 */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center my-6">Stock Prediction AI</h1>
+
+    <div class="flex h-[calc(100vh-120px)]">
+      <div class="w-56 bg-gray-800 rounded-lg p-4 mr-4 flex flex-col">
+        <div class="flex items-center mb-4 flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+          <span class="font-medium">Search History</span>
+        </div>
+
+        <div id="search-history-list" class="flex flex-col space-y-3 overflow-y-auto flex-grow pb-4">
+          <div class="search-item bg-gray-700 hover:bg-gray-600 p-2 rounded-md transition cursor-pointer">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-light truncate">AAPL next quarter prediction</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">March 29, 2025</p>
+          </div>
+
+          <div class="search-item bg-gray-700 hover:bg-gray-600 p-2 rounded-md transition cursor-pointer">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-light truncate">TSLA 6-month forecast</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">March 28, 2025</p>
+          </div>
+
+          <div class="search-item bg-gray-700 hover:bg-gray-600 p-2 rounded-md transition cursor-pointer">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-light truncate">MSFT vs GOOGL comparison</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">March 27, 2025</p>
+          </div>
+
+          <div class="search-item bg-gray-700 hover:bg-gray-600 p-2 rounded-md transition cursor-pointer">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-light truncate">Semiconductor sector trends</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">March 25, 2025</p>
+          </div>
+
+          <div class="search-item bg-gray-700 hover:bg-gray-600 p-2 rounded-md transition cursor-pointer">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-light truncate">AMZN earnings impact</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">March 23, 2025</p>
+          </div>
+           </div>
+      </div>
+
+      <div class="flex-1 bg-gray-800 rounded-lg p-4 flex flex-col">
+        <div class="flex items-center justify-between mb-4 flex-shrink-0">
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+            </svg>
+            <span class="font-medium">Stock Prediction Assistant</span>
+          </div>
+
+          <div class="flex items-center bg-gray-700 rounded-lg p-1">
+            <button id="text-view-btn" class="text-xs px-3 py-1 rounded-md bg-blue-600 text-white font-medium">Text</button>
+            <button id="graph-view-btn" class="text-xs px-3 py-1 rounded-md text-gray-300 font-medium">Graph</button>
+          </div>
+        </div>
+
+        <div id="text-view" class="bg-gray-900 rounded p-4 mb-auto overflow-y-auto flex-grow">
+          <div class="bg-gray-800 rounded-lg p-3">
+            <p class="font-light">Hello! I'm your stock prediction assistant. Ask me about any stock trends you're interested in.</p>
+            <p class="text-gray-500 text-xs mt-2 font-light">less than a minute ago</p>
+          </div>
+
+          <div class="mt-4 p-3 bg-gray-800 rounded-lg">
+            <h3 class="text-sm font-medium text-blue-400">How to use this AI assistant:</h3>
+            <ul class="mt-2 text-xs text-gray-300 space-y-2">
+              <li>• Ask about specific stock predictions (e.g., "Predict AAPL stock next quarter")</li>
+              <li>• Compare multiple stocks (e.g., "Compare MSFT and GOOGL performance")</li>
+              <li>• Request sector analysis (e.g., "Analyze the tech sector trends")</li>
+              <li>• Upload financial documents for analysis (feature example)</li>
+              <li>• Switch to graph view to visualize predictions</li>
+            </ul>
+          </div>
+          </div>
+
+        <div id="graph-view" class="hidden bg-gray-900 rounded p-4 mb-auto overflow-y-auto flex-grow flex flex-col items-center justify-start">
+          <div class="w-full h-64 md:h-80 lg:h-96 bg-gray-800 rounded-lg mb-4 p-4 flex items-center justify-center">
+            <canvas id="stockChart"></canvas>
+          </div>
+
+          <div class="w-full bg-gray-800 rounded-lg p-4">
+            <h3 id="chart-title" class="text-sm font-medium mb-2 text-blue-400">AAPL Stock Prediction</h3>
+            <p class="text-xs text-gray-300 mb-1">Predicted growth: <span class="text-green-400" id="growth-value">+12.8%</span> (Next 6 months)</p>
+            <p class="text-xs text-gray-300 mb-1">Confidence score: <span class="text-blue-400" id="confidence-score">87%</span></p>
+            <p class="text-xs text-gray-300">Based on historical data and market trends</p>
+
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mt-3">
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="AAPL">AAPL</button>
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="TSLA">TSLA</button>
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="MSFT">MSFT</button>
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="GOOGL">GOOGL</button>
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="AMZN">AMZN</button>
+              <button class="stock-btn bg-gray-700 hover:bg-gray-600 text-xs p-2 rounded" data-stock="META">META</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 flex-shrink-0">
+          <div id="file-preview" class="hidden mb-2 p-2 bg-gray-700 rounded-lg">
+             <div class="flex items-center justify-between">
+               <div class="flex items-center overflow-hidden mr-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                 </svg>
+                 <span class="text-sm font-light file-name truncate">filename.pdf</span>
+               </div>
+               <button class="text-gray-400 hover:text-red-400 flex-shrink-0">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                 </svg>
+               </button>
+             </div>
+          </div>
+
+          <div class="flex items-center">
+            <input type="file" id="file-upload" class="hidden" multiple />
+
+            <label for="file-upload" class="mr-2 text-gray-400 hover:text-blue-400 transition cursor-pointer p-3 bg-gray-700 hover:bg-gray-600 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+              </svg>
+            </label>
+
+            <div class="flex-1 relative">
+              <input type="text" id="query-input" placeholder="Ask about stock predictions..." class="w-full bg-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 font-light text-sm">
+            </div>
+
+            <button id="send-button" class="ml-2 bg-blue-600 rounded-full p-3 hover:bg-blue-700 transition flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+              </svg>
+            </button>
+          </div>
+        </div> </div> </div> </div> <script>
+    // Initialize Chart.js
+    let stockChart;
+    let currentStock = 'AAPL'; // Default stock
+
+    // Stock data - simulated (Replace with actual API calls for real data)
+    const stockData = {
+      'AAPL': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [180.25, 185.92, 175.48, 190.34, 193.67, 198.82, null, null, null, null, null, null], // Past 6 months
+        predicted: [null, null, null, null, null, 198.82, 207.56, 212.33, 218.75, 223.41, 227.89, 231.50], // Current + Next 6 months
+        growth: '+12.8%',
+        confidence: '87%'
+      },
+      'TSLA': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [215.87, 202.64, 180.56, 187.92, 193.45, 185.76, null, null, null, null, null, null],
+        predicted: [null, null, null, null, null, 185.76, 196.23, 204.78, 212.45, 226.87, 234.56, 240.10],
+        growth: '+26.3%',
+        confidence: '72%'
+      },
+      'MSFT': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [410.25, 415.87, 425.64, 432.87, 427.56, 438.92, null, null, null, null, null, null],
+        predicted: [null, null, null, null, null, 438.92, 453.67, 462.34, 471.56, 483.27, 492.56, 501.80],
+        growth: '+14.2%',
+        confidence: '91%'
+      },
+      'GOOGL': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [142.65, 147.23, 153.42, 154.87, 151.23, 159.56, null, null, null, null, null, null],
+        predicted: [null, null, null, null, null, 159.56, 167.23, 172.45, 178.32, 184.56, 192.34, 198.70],
+        growth: '+18.6%',
+        confidence: '83%'
+      },
+      'AMZN': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [156.87, 162.34, 158.76, 167.23, 170.56, 175.34, null, null, null, null, null, null],
+        predicted: [null, null, null, null, null, 175.34, 183.45, 189.67, 194.23, 201.45, 212.37, 219.50],
+        growth: '+21.1%',
+        confidence: '78%'
+      },
+      'META': {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        prices: [394.25, 408.76, 415.34, 425.87, 437.45, 442.87, null, null, null, null, null, null],
+        predicted: [null, null, null, null, null, 442.87, 458.32, 467.56, 482.34, 495.67, 504.23, 512.90],
+        growth: '+16.1%',
+        confidence: '85%'
+      }
+    };
+
+    // Function to initialize or update chart
+    function initChart(stockSymbol) {
+      const chartData = stockData[stockSymbol];
+      if (!chartData) {
+          console.error("No data found for stock:", stockSymbol);
+          // Optionally display an error message in the UI
+          return;
+      }
+      const ctx = document.getElementById('stockChart').getContext('2d');
+
+      // Update prediction info in graph view
+      document.getElementById('chart-title').textContent = `${stockSymbol} Stock Prediction`;
+      document.getElementById('growth-value').textContent = chartData.growth;
+      document.getElementById('growth-value').className = chartData.growth.startsWith('+') ? 'text-green-400' : 'text-red-400';
+      document.getElementById('confidence-score').textContent = chartData.confidence;
+
+      // If chart already exists, destroy it before creating a new one
+      if (stockChart) {
+        stockChart.destroy();
+      }
+
+      // Create new chart instance
+      stockChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: chartData.labels, // Use all 12 labels
+          datasets: [
+            {
+              label: 'Historical',
+              data: chartData.prices, // Data for past 6 months
+              borderColor: '#3b82f6', // Blue
+              backgroundColor: 'transparent',
+              pointBackgroundColor: '#3b82f6',
+              tension: 0.4,
+              borderWidth: 2,
+              spanGaps: true // Connect lines over null values if needed visually
+            },
+            {
+              label: 'Predicted',
+              data: chartData.predicted, // Data for current + next 6 months
+              borderColor: '#10b981', // Green
+              borderDash: [5, 5],
+              pointBackgroundColor: '#10b981',
+              backgroundColor: 'transparent',
+              tension: 0.4,
+              borderWidth: 2,
+              spanGaps: true // Crucial for connecting predicted line start
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: {
+                color: '#d1d5db',
+                font: { family: 'Poppins', size: 11 }
+              }
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              backgroundColor: 'rgba(17, 24, 39, 0.9)', // gray-900 with opacity
+              titleFont: { family: 'Poppins', size: 12 },
+              bodyFont: { family: 'Poppins', size: 11 },
+              padding: 10,
+              borderColor: '#3b82f6', // Blue
+              borderWidth: 1,
+              callbacks: {
+                // Format tooltip values as currency
+                 label: function(context) {
+                    let label = context.dataset.label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    if (context.parsed.y !== null) {
+                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                    }
+                    return label;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(55, 65, 81, 0.5)', drawBorder: false }, // gray-700 with opacity
+              ticks: { color: '#9ca3af', font: { family: 'Poppins', size: 10 } } // gray-400
+            },
+            y: {
+              grid: { color: 'rgba(55, 65, 81, 0.5)', drawBorder: false },
+              ticks: {
+                color: '#9ca3af',
+                font: { family: 'Poppins', size: 10 },
+                callback: function(value) { return '$' + value; } // Format Y-axis ticks as currency
+              }
+            }
+          },
+          interaction: {
+            mode: 'nearest',
+            axis: 'x',
+            intersect: false
+          }
+        }
+      });
+    }
+
+    // JavaScript to handle file upload preview
+    const fileUploadInput = document.getElementById('file-upload');
+    const filePreviewArea = document.getElementById('file-preview');
+    const fileNameElement = filePreviewArea.querySelector('.file-name');
+    const clearFileBtn = filePreviewArea.querySelector('button');
+
+    fileUploadInput.addEventListener('change', function(e) {
+      if (this.files.length > 0) {
+        // Show only the first file name if multiple are selected
+        fileNameElement.textContent = this.files[0].name;
+        filePreviewArea.classList.remove('hidden');
+      } else {
+        filePreviewArea.classList.add('hidden');
+      }
+    });
+
+    clearFileBtn.addEventListener('click', function() {
+      fileUploadInput.value = ''; // Clear the file input
+      filePreviewArea.classList.add('hidden'); // Hide the preview
+    });
+
+    // Toggle between text and graph views
+    const textViewBtn = document.getElementById('text-view-btn');
+    const graphViewBtn = document.getElementById('graph-view-btn');
+    const textView = document.getElementById('text-view');
+    const graphView = document.getElementById('graph-view');
+    // const toggleGraphBtn = document.getElementById('toggle-graph-btn'); // Redundant button removed from HTML
+
+    function switchToTextView() {
+        textView.classList.remove('hidden');
+        graphView.classList.add('hidden');
+        textViewBtn.classList.add('bg-blue-600', 'text-white');
+        textViewBtn.classList.remove('text-gray-300');
+        graphViewBtn.classList.remove('bg-blue-600', 'text-white');
+        graphViewBtn.classList.add('text-gray-300');
+    }
+
+    function switchToGraphView(stockToShow = currentStock) {
+        textView.classList.add('hidden');
+        graphView.classList.remove('hidden');
+        graphViewBtn.classList.add('bg-blue-600', 'text-white');
+        graphViewBtn.classList.remove('text-gray-300');
+        textViewBtn.classList.remove('bg-blue-600', 'text-white');
+        textViewBtn.classList.add('text-gray-300');
+
+        // Initialize or update chart when switching to graph view
+        initChart(stockToShow);
+    }
+
+    textViewBtn.addEventListener('click', switchToTextView);
+    graphViewBtn.addEventListener('click', () => switchToGraphView());
+
+    // Add click handler to stock buttons in graph view
+    document.querySelectorAll('.stock-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const stockSymbol = this.getAttribute('data-stock');
+        currentStock = stockSymbol; // Update global current stock
+        initChart(stockSymbol); // Update chart immediately
+      });
+    });
+
+    // Handle input and send button
+    const sendButton = document.getElementById('send-button');
+    const queryInput = document.getElementById('query-input');
+
+    sendButton.addEventListener('click', handleQuery);
+    queryInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        handleQuery();
+      }
+    });
+
+    // Function to format date/time
+    function getCurrentTimestamp() {
+        const now = new Date();
+        return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function handleQuery() {
+      const query = queryInput.value.trim();
+
+      if (query.length === 0 && fileUploadInput.files.length === 0) return; // Do nothing if no text and no file
+
+      let messageContent = query;
+      if (fileUploadInput.files.length > 0) {
+          messageContent += ` (Attachment: ${fileUploadInput.files[0].name})`;
+      }
+
+      // Add user query to text view
+      const userQueryElement = document.createElement('div');
+      userQueryElement.className = 'mt-4 p-3 bg-gray-700 rounded-lg ml-auto max-w-xs sm:max-w-md lg:max-w-lg text-right'; // Align user messages right
+      userQueryElement.innerHTML = `
+        <p class="text-sm font-light text-white">${messageContent}</p>
+        <p class="text-gray-500 text-xs mt-1 font-light">${getCurrentTimestamp()}</p>
+      `;
+      textView.appendChild(userQueryElement);
+
+      // Clear input and file preview
+      queryInput.value = '';
+      fileUploadInput.value = ''; // Clear file input
+      filePreviewArea.classList.add('hidden'); // Hide preview
+
+      // Scroll chat to bottom
+      textView.scrollTop = textView.scrollHeight;
+
+      // Extract stock symbol if present in the query
+      const stockSymbols = ['AAPL', 'TSLA', 'MSFT', 'GOOGL', 'AMZN', 'META'];
+      let foundStock = null;
+
+      for (const symbol of stockSymbols) {
+        // Use regex for better matching (case-insensitive, word boundary)
+        const regex = new RegExp(`\\b${symbol}\\b`, 'i');
+        if (regex.test(query)) {
+          foundStock = symbol;
+          break;
+        }
+      }
+
+      // --- Simulate AI response ---
+      const responseElement = document.createElement('div');
+      responseElement.className = 'mt-4 p-3 bg-gray-800 rounded-lg mr-auto max-w-xs sm:max-w-md lg:max-w-lg'; // Align AI messages left
+      let responseHTML = '';
+
+      // Add a typing indicator (optional)
+       const typingIndicator = document.createElement('div');
+       typingIndicator.className = 'mt-4 p-3 bg-gray-800 rounded-lg mr-auto max-w-xs sm:max-w-md lg:max-w-lg flex items-center space-x-1';
+       typingIndicator.innerHTML = `
+            <span class="text-sm font-light text-gray-400">AI is thinking</span>
+            <div class="animate-pulse flex space-x-1">
+                <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                <div class="w-1.5 h-1.5 bg-blue-400 rounded-full animation-delay-200"></div>
+                <div class="w-1.5 h-1.5 bg-blue-400 rounded-full animation-delay-400"></div>
+            </div>
+       `;
+        textView.appendChild(typingIndicator);
+        textView.scrollTop = textView.scrollHeight;
+
+
+      setTimeout(() => {
+          // Remove typing indicator
+          typingIndicator.remove();
+
+        // If stock found, provide specific response
+        if (foundStock) {
+          currentStock = foundStock; // Update the current stock context
+          const stockInfo = stockData[foundStock];
+          const currentPrice = stockInfo.prices.findLast(p => p !== null); // Get the last non-null price
+          responseHTML = `
+            <p class="text-sm font-light">Here's the analysis for ${foundStock}: Based on current market trends, our AI predicts ${stockInfo.growth} growth over the next 6 months with ${stockInfo.confidence} confidence. The last recorded price was $${currentPrice}.</p>
+            <p class="text-gray-500 text-xs mt-1 font-light">${getCurrentTimestamp()}</p>
+            <button class="view-chart-btn mt-2 text-xs text-blue-400 hover:underline">View chart for ${foundStock}</button>
+          `;
+        } else if (query.toLowerCase().includes('compare')) {
+          responseHTML = `
+            <p class="text-sm font-light">Comparison analysis is a planned feature. Currently, you can view individual stock charts. Which stock would you like to see first?</p>
+            <p class="text-gray-500 text-xs mt-1 font-light">${getCurrentTimestamp()}</p>
+          `;
+        } else if (query.toLowerCase().includes('upload') || query.toLowerCase().includes('document')) {
+          responseHTML = `
+            <p class="text-sm font-light">Document analysis feature is currently under development. You can ask for predictions on specific stocks like AAPL, TSLA, etc.</p>
+            <p class="text-gray-500 text-xs mt-1 font-light">${getCurrentTimestamp()}</p>
+          `;
+        } else { // Generic response
+          responseHTML = `
+            <p class="text-sm font-light">I can provide predictions for specific stocks like AAPL, TSLA, MSFT, GOOGL, AMZN, or META. Please ask about one of these, or try asking to "compare" stocks.</p>
+            <p class="text-gray-500 text-xs mt-1 font-light">${getCurrentTimestamp()}</p>
+          `;
+        }
+
+        responseElement.innerHTML = responseHTML;
+        textView.appendChild(responseElement);
+
+        // Scroll chat to bottom again after adding response
+        textView.scrollTop = textView.scrollHeight;
+
+      }, 1500); // Simulate delay for response
+    }
+
+    // Add event listener for dynamically added "View chart" buttons
+    textView.addEventListener('click', function(event) {
+        if (event.target.classList.contains('view-chart-btn')) {
+            // The 'currentStock' variable should hold the stock mentioned in the response
+            switchToGraphView(currentStock);
+        }
+    });
+
+    // Initialize chart on page load IF graph view is initially visible (it's not in this setup)
+    // If you wanted the graph view to be default, you'd uncomment the next line
+    // document.addEventListener('DOMContentLoaded', () => initChart(currentStock));
+
+  </script>
+
+</body>
+</html>

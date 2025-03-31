@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Stock Market & Financial Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for Graphs -->
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+
+    <div class="w-full max-w-2xl p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-center mb-4">AI-Powered Stock Market & Financial Assistant Integrated Gemini-Flash-2.0</h2>
+
+        <!-- AI Form -->
+        <form id="aiForm" class="space-y-4">
+            <label class="block">
+                <span class="text-gray-300">Enter Your Query:</span>
+                <textarea id="userInput" class="w-full p-3 rounded-lg text-black" rows="3" placeholder="Ask something..."></textarea>
+            </label>
+
+            <label class="block">
+                <span class="text-gray-300">Select Response Type:</span>
+                <select id="responseType" class="w-full p-2 rounded-lg text-black">
+                    <option value="text">Text</option>
+                    <option value="image">Image</option>
+                    <option value="graph">Graph</option>
+                </select>
+            </label>
+
+            <button type="button" onclick="getAIResponse()" class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">
+                Generate Response
+            </button>
+        </form>
+
+        <!-- AI Response Section -->
+        <div id="responseContainer" class="mt-4 p-3 bg-gray-700 rounded-lg hidden">
+            <h3 class="font-semibold">Response:</h3>
+            <p id="responseText" class="mt-2"></p>
+        </div>
+
+        <!-- Graph Section -->
+        <canvas id="myChart" class="mt-4 hidden"></canvas>
+
+        <!-- Image Section -->
+        <div id="imageContainer" class="mt-4 hidden">
+            <h3 class="font-semibold">Generated Image:</h3>
+            <img id="generatedImage" class="mt-2 rounded-lg w-full" alt="Generated AI Image">
+        </div>
+    </div>
+
+    <script>
+        async function getAIResponse() {
+            const userInput = document.getElementById("userInput").value;
+            const responseType = document.getElementById("responseType").value;
+            if (!userInput) {
+                alert("Please enter a query!");
+                return;
+            }
+
+            const apiKey = "API-KEY"; // Replace with your actual API key
+            const url = "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=" + apiKey;
+
+            const requestBody = {
+                contents: [{ role: "user", parts: [{ text: userInput }] }]
+            };
+
+            try {
+                document.getElementById("responseContainer").classList.add("hidden");
+                document.getElementById("myChart").classList.add("hidden");
+                document.getElementById("imageContainer").classList.add("hidden");
+
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const data = await response.json();
+                const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response received.";
+
+                if (responseType === "text") {
+                    document.getElementById("responseText").innerText = responseText;
+                    document.getElementById("responseContainer").classList.remove("hidden");
+                } else if (responseType === "graph") {
+                    generateGraph(responseText);
+                } else if (responseType === "image") {
+                    generateImage(userInput);
+                }
+
+            } catch (error) {
+                console.error("Error fetching response:", error);
+                alert("Error getting AI response. Check your API key and internet connection.");
+            }
+        }
+
+        function generateGraph(responseText) {
+            try {
+                let numbers = responseText.match(/\d+/g)?.map(Number);
+                if (!numbers || numbers.length < 2) {
+                    alert("AI did not provide enough data for a graph.");
+                    return;
+                }
+
+                const ctx = document.getElementById('myChart').getContext('2d');
+                document.getElementById("myChart").classList.remove("hidden");
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: numbers.map((_, i) => "Data " + (i + 1)),
+                        datasets: [{
+                            label: 'Generated Graph Data',
+                            data: numbers,
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error generating graph:", error);
+            }
+        }
+
+        async function generateImage(prompt) {
+            try {
+                const apiKey = "Your_Api_Key"; // Replace with your actual API key
+                const url = "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=" + apiKey;
+
+                const requestBody = {
+                    contents: [{ role: "user", parts: [{ text: "Generate an image of " + prompt }] }]
+                };
+
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const data = await response.json();
+                const imageUrl = data.candidates?.[0]?.content?.parts?.[0]?.text; // AI should return an image URL
+
+                if (imageUrl) {
+                    document.getElementById("generatedImage").src = imageUrl;
+                    document.getElementById("imageContainer").classList.remove("hidden");
+                } else {
+                    alert("AI did not generate an image.");
+                }
+
+            } catch (error) {
+                console.error("Error generating image:", error);
+            }
+        }
+    </script>
+
+</body>
+</html>

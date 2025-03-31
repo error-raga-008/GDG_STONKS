@@ -1,0 +1,2 @@
+date,sentiment,volume,daily_change,volatility,50_day_MA,200_day_MA,predicted_close
+2024-03-06,-0.2,7610876,-11.899999999999977,31.0,560.7460000000001,360.996,616.734

@@ -111,6 +111,7 @@ ui/test.html
 ---
 # 📂File Structure - Tech_Traders
 
+```sh
 Tech_Traders/  
 │── 📁 Prediction_Model/  
 │   │── stock_price_model_close.h5  # LSTM model for closing price prediction  
@@ -162,7 +163,7 @@ Tech_Traders/
 │── 📜 .gitignore  # Ignore unnecessary files  
 │── 📜 README.md  # Documentation & setup instructions  
 │── 📜 requirements.txt  # List of required Python dependencies  
-
+```
 
 
 ## 📊 Model Performance  

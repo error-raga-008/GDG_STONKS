@@ -109,57 +109,60 @@ ui/test.html
 - [AI-Powered Financial Chatbot With Gemini](https://ai-powred-financial-chatbot-gdg.netlify.app/)  
 
 ---
-Tech_Traders/
+# 📂File Structure - Tech_Traders
+
+Tech_Traders/  
 │── 📁 Prediction_Model/  
-│   │── stock_price_model_close.h5         # LSTM model for closing price prediction  
-│   │── stock_price_model_open.h5          # LSTM model for opening price prediction  
-│   │── stock_data.csv                      # Historical stock price dataset  
-│   │── news_data.csv                       # Financial news dataset  
-│   │── predicted_stock_prices.csv          # AI-generated stock predictions  
-│   │── Stock_prediction_model.ipynb        # Jupyter Notebook for stock prediction model  
+│   │── stock_price_model_close.h5  # LSTM model for closing price prediction  
+│   │── stock_price_model_open.h5  # LSTM model for opening price prediction  
+│   │── stock_data.csv  # Historical stock price dataset  
+│   │── news_data.csv  # Financial news dataset  
+│   │── predicted_stock_prices.csv  # AI-generated stock predictions  
+│   │── Stock_prediction_model.ipynb  # Jupyter Notebook for stock prediction model  
 │  
-│── 📁 Prediction Model on Datadog Inc (99% accurate)  # Stock prediction model for Datadog Inc  
-│   │── Stock_prediction_model.ipynb                  # Datadog Inc prediction model notebook  
-│   │── actual.csv                                    # Actual stock prices for evaluation  
-│   │── new_news_data.csv                             # Updated news dataset  
-│   │── news_data.csv                                 # Financial news dataset  
-│   │── predicted_stock_prices.csv                    # AI-generated stock predictions for Datadog Inc  
-│   │── stock_data.csv                                # Historical stock price dataset for Datadog Inc  
+│── 📁 Prediction_Model_Datadog/  # Stock prediction model for Datadog Inc (99% accuracy)  
+│   │── Stock_prediction_model.ipynb  
+│   │── actual.csv  # Actual stock prices for evaluation  
+│   │── new_news_data.csv  # Updated news dataset  
+│   │── news_data.csv  # Financial news dataset  
+│   │── predicted_stock_prices.csv  # AI-generated stock predictions  
+│   │── stock_data.csv  # Historical stock price dataset  
 │  
-│── 📁 Prediction Model on Adani Power Stock (99% accurate)  # Stock prediction model for Adani Power   
-│   │── Stock_prediction_model.ipynb                         # Adani Power stock prediction model notebook  
-│   │── actual.csv                                           # Actual stock prices for evaluation  
-│   │── new_news_data.csv                                    # Updated news dataset  
-│   │── news_data.csv                                        # Financial news dataset  
-│   │── predicted_news.csv                                   # AI-generated financial news predictions for Adani Power  
-│   │── predicted_stock_prices.csv                           # AI-generated stock predictions for Adani Power  
-│   │── stock_data.csv                                       # Historical stock price dataset for Adani Power  
+│── 📁 Prediction_Model_Adani_Power/  # Stock prediction model for Adani Power (99% accuracy)  
+│   │── Stock_prediction_model.ipynb  
+│   │── actual.csv  # Actual stock prices for evaluation  
+│   │── new_news_data.csv  # Updated news dataset  
+│   │── news_data.csv  # Financial news dataset  
+│   │── predicted_news.csv  # AI-generated financial news predictions  
+│   │── predicted_stock_prices.csv  # AI-generated stock predictions  
+│   │── stock_data.csv  # Historical stock price dataset  
 │  
-│── 📁 assets/                             # Folder for storing images  
-│   │── Accuracy.jpg                       # Model accuracy visualization  
-│   │── ChatBot_result.jpg                  # Chatbot prediction output  
-│   │── Chatbot_Ui.jpg                      # User interface of the chatbot  
-│   │── DataBase_tables.jpg                 # Database schema and tables  
-│   │── flowchart.png                       # System flowchart diagram  
-│   │── logo.jpg                            # Project or company logo  
-│   │── Model_Error_Analysis.jpg            # Model error evaluation analysis  
-│   │── Model_sample_code_Snippet.png       # Sample code snippet from the model  
+│── 📁 assets/  # Folder for storing images and diagrams  
+│   │── Accuracy.jpg  # Model accuracy visualization  
+│   │── ChatBot_result.jpg  # Chatbot prediction output  
+│   │── Chatbot_Ui.jpg  # User interface of the chatbot  
+│   │── DataBase_tables.jpg  # Database schema and tables  
+│   │── flowchart.png  # System flowchart diagram  
+│   │── logo.jpg  # Project or company logo  
+│   │── Model_Error_Analysis.jpg  # Model error evaluation analysis  
+│   │── Model_sample_code_Snippet.png  # Sample code snippet from the model  
 │  
-│── 📁 ui/                                 # Folder for UI-related files  
-│   │── test.html                           # HTML file for chatbot with Gemini API's UI  
-│   │── index.html                          # HTML file for Model Assistant's UI  
+│── 📁 ui/  # Folder for UI-related files  
+│   │── test.html  # HTML file for chatbot with Gemini API's UI  
+│   │── index.html  # HTML file for Model Assistant's UI  
 │  
-│── 📁 news_scraper/                       # Folder for scraping news    
-│   │── chromedriver.exe                   # Web driver for scraping  
-│   │── news.py                            # Python script for fetching news  
+│── 📁 news_scraper/  # Folder for scraping news  
+│   │── chromedriver.exe  # Web driver for scraping  
+│   │── news.py  # Python script for fetching news  
 │  
-│── 📁 database/                           # Folder for database-related files  
-│   │── database.sql                        # SQL file for database setup  
+│── 📁 database/  # Folder for database-related files  
+│   │── database.sql  # SQL file for database setup  
 │  
-│── 📜 LICENSE                             # Open-source license file  
-│── 📜 .gitignore                          # Ignore unnecessary files  
-│── 📜 README.md                           # Documentation & setup instructions  
-│── 📜 requirements.txt                     # List of required Python dependencies  
+│── 📜 LICENSE  # Open-source license file  
+│── 📜 .gitignore  # Ignore unnecessary files  
+│── 📜 README.md  # Documentation & setup instructions  
+│── 📜 requirements.txt  # List of required Python dependencies  
+
 
 
 ## 📊 Model Performance  

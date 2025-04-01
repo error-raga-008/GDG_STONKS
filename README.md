@@ -121,7 +121,7 @@ Tech_Traders/
 │   │── predicted_stock_prices.csv  # AI-generated stock predictions  
 │   │── Stock_prediction_model.ipynb  # Jupyter Notebook for stock prediction model  
 │  
-│── 📁 Prediction_Model_Datadog/  # Stock prediction model for Datadog Inc (99% accuracy)  
+│── 📁 Prediction_Model_Datadog/  # Stock prediction model for Datadog Inc  
 │   │── Stock_prediction_model.ipynb  
 │   │── actual.csv  # Actual stock prices for evaluation  
 │   │── new_news_data.csv  # Updated news dataset  
@@ -129,7 +129,7 @@ Tech_Traders/
 │   │── predicted_stock_prices.csv  # AI-generated stock predictions  
 │   │── stock_data.csv  # Historical stock price dataset  
 │  
-│── 📁 Prediction_Model_Adani_Power/  # Stock prediction model for Adani Power (99% accuracy)  
+│── 📁 Prediction_Model_Adani_Power/  # Stock prediction model for Adani Power   
 │   │── Stock_prediction_model.ipynb  
 │   │── actual.csv  # Actual stock prices for evaluation  
 │   │── new_news_data.csv  # Updated news dataset  
@@ -172,8 +172,8 @@ Tech_Traders/
 ✅ **Tested on:** 2015-2024 stock data  
 ✅ **Predicted stock prices for:** June 2024  
 
-*This model is trained on **Adani Power stocks** and predicts **June 2024 stock prices** based on **news sentiment and historical data from 2010 to May 2024**.  
-
+**📌 Note:**
+This model is trained on **Adani Power stocks** and predicts **June 2024 stock prices** based on **news sentiment and historical data from 2010 to May 2024**.  
 Additionally, we tested this model on **Datadog Inc**, which successfully predicted the **January 2024 stock price** with high accuracy.  
 
 ---
@@ -209,7 +209,7 @@ Additionally, we tested this model on **Datadog Inc**, which successfully predic
 ## 📢 Submission Links  
 
 🔗 **Google Drive MVP Link:** [Click here](https://drive.google.com/drive/u/0/folders/1mEkpHnyDVfx_SHxb94X3iIvl6zxyJV8Z)  
-🎥 **Demo Video:** [Watch here](https://youtu.be/KqnEQ0DMg9c?si=yCju-WLICqk8K107)  
+🎥 **Demo Video:** [Watch here](https://youtu.be/Pivr7VEBWVU?si=gLBmbXEut0XwTSCj)  
 
 ---
 

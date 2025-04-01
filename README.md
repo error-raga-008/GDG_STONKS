@@ -78,7 +78,7 @@ Ensure you have **Python 3.8+**, **TensorFlow**, and **Flask** installed.
 
 ### 3️⃣ Run the Stock Prediction Model on Adani Power Stock  
 ```sh
-python "Prediction Model on Adani Power Stock/Stock_prediction_model-checkpoint.ipynb"  
+python "Prediction Model on Adani Power Stock/Stock_prediction_model.ipynb"  
 ```  
 
 ### 4️⃣ Run the Stock Prediction Model with Graph Feature  
@@ -88,7 +88,7 @@ python "Prediction_Model(with Graph Feature)/Stock_prediction_model.ipynb"
 
 ### 5️⃣ Run the Stock Prediction Model On Datadog Inc  
 ```sh
-python "Prediction Model on Datadog Inc/Stock_prediction_model-checkpoint.ipynb"  
+python "Prediction Model on Datadog Inc/Stock_prediction_model.ipynb"  
 ```  
 
 ### 6️⃣ Configure API Key  
@@ -134,8 +134,8 @@ Additionally, we tested this model on **Datadog Inc**, which successfully predic
 
 ✅ **Stock Prediction Model**: Fully functional and can be executed using the provided:  
 - `Prediction_Model(with Graph Feature)/Stock_prediction_model.ipynb`  
-- `Prediction Model on Adani Power Stock/Stock_prediction_model-checkpoint.ipynb`  
-- `Prediction Model on Datadog Inc/Stock_prediction_model-checkpoint.ipynb`  
+- `Prediction Model on Adani Power Stock/Stock_prediction_model.ipynb`  
+- `Prediction Model on Datadog Inc/Stock_prediction_model.ipynb`  
 
 ✅ **Chatbot & UI**: The `test.html` and `index.html` files are working properly and can be accessed through a browser.  
 

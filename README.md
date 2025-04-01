@@ -72,8 +72,9 @@ cd TechTraders_model
 
 ### 2️⃣ Install Dependencies  
 ```sh
-pip install -r requirements.txt  
-```  
+pip install -r requirements.txt   
+```
+Kindly install the involment provided by us to use out model  
 Ensure you have **Python 3.8+**, **TensorFlow**, and **Flask** installed.  
 
 ### 3️⃣ Run the Stock Prediction Model on Adani Power Stock  
@@ -162,7 +163,8 @@ Tech_Traders/
 │── 📜 LICENSE  # Open-source license file  
 │── 📜 .gitignore  # Ignore unnecessary files  
 │── 📜 README.md  # Documentation & setup instructions  
-│── 📜 requirements.txt  # List of required Python dependencies  
+│── 📜 requirements.txt  # List of required Python dependencies
+│── 📜 environment.yml  # Environment to run out program  
 ```
 
 
